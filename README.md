@@ -5,7 +5,7 @@ Repository of all my container images. Prebuilt images are available at [Docker 
 Instructions to push a new image:
 
 ```bash
-podman built -t imagename .
+podman build -t imagename .
 podman login
 podman push imagename:latest vimpostor/imagename:latest
 ```
