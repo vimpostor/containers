@@ -1,6 +1,6 @@
 # Containers
 
-Repository of all my container images. Prebuilt images are available at [Docker Hub](https://hub.docker.com/u/vimpostor) in the `vimpostor` namespace.
+This repository contains various miscellaneous container images. Prebuilt images are available at [Docker Hub](https://hub.docker.com/u/vimpostor) in the `vimpostor` namespace.
 
 Instructions to push a new image:
 
