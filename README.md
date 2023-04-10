@@ -6,6 +6,6 @@ Instructions to push a new image:
 
 ```bash
 podman build -t imagename .
-podman login
+podman login docker.io
 podman push imagename:latest vimpostor/imagename:latest
 ```
