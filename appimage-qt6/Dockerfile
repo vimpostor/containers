@@ -22,6 +22,7 @@ RUN curl -L https://github.com/Kitware/CMake/releases/download/v3.27.7/cmake-3.2
 RUN pip3 install aqtinstall && aqt install-qt -O /opt/qt linux desktop "$DOCKER_QT_VERSION" gcc_64
 ENV PATH="/opt/qt/$DOCKER_QT_VERSION/gcc_64/bin:$PATH"
 ENV LD_LIBRARY_PATH="/opt/qt/$DOCKER_QT_VERSION/gcc_64/lib:$LD_LIBRARY_PATH"
+ENV QMAKE="/opt/qt/$DOCKER_QT_VERSION/gcc_64/bin/qmake"
 
 # install linuxdeployqt
 RUN wget -q -nc https://github.com/linuxdeploy/linuxdeploy/releases/latest/download/linuxdeploy-x86_64.AppImage https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage && chmod +x linuxdeploy-*.AppImage && ./linuxdeploy-x86_64.AppImage --appimage-extract && mv squashfs-root /opt/linuxdeploy && ./linuxdeploy-plugin-qt-x86_64.AppImage --appimage-extract && mv squashfs-root /opt/linuxdeploy-plugin-qt && rm linuxdeploy-*.AppImage
