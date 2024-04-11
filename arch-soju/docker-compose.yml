@@ -1,0 +1,19 @@
+version: '2'
+
+volumes:
+  soju:
+
+networks:
+  soju_network:
+    external: false
+
+services:
+  soju:
+    image: docker.io/vimpostor/arch-soju
+    restart: always
+    ports:
+      - "127.0.0.1:6668:6668"
+    volumes:
+      - soju:/var/lib/soju
+    networks:
+      - soju_network
