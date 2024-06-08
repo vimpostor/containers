@@ -19,7 +19,7 @@ RUN add-apt-repository ppa:ubuntu-toolchain-r/test && apt-get update && apt-get 
 RUN curl -L https://github.com/Kitware/CMake/releases/download/v3.27.7/cmake-3.27.7-linux-x86_64.sh -o cmake-install.sh && chmod +x cmake-install.sh && ./cmake-install.sh --prefix=/usr/local --exclude-subdir && rm cmake-install.sh
 
 # install qt
-RUN pip3 install aqtinstall && aqt install-qt -O /opt/qt linux desktop "$DOCKER_QT_VERSION" gcc_64
+RUN pip3 install aqtinstall && aqt install-qt -O /opt/qt linux desktop "$DOCKER_QT_VERSION" linux_gcc_64
 ENV PATH="/opt/qt/$DOCKER_QT_VERSION/gcc_64/bin:$PATH"
 ENV LD_LIBRARY_PATH="/opt/qt/$DOCKER_QT_VERSION/gcc_64/lib:$LD_LIBRARY_PATH"
 ENV QMAKE="/opt/qt/$DOCKER_QT_VERSION/gcc_64/bin/qmake"
