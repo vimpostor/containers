@@ -1,6 +1,6 @@
 FROM docker.io/library/ubuntu:20.04
 
-ARG DOCKER_QT_VERSION=6
+ARG DOCKER_QT_VERSION=6.7
 
 ENV DEBIAN_FRONTEND=noninteractive
 # basic dependencies
