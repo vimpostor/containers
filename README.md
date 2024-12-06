@@ -9,3 +9,5 @@ podman build -t imagename .
 podman login docker.io
 podman push imagename:latest vimpostor/imagename:latest
 ```
+
+Or alternatively use the [provided script](scripts/podman-push.sh) from the respective directory.
