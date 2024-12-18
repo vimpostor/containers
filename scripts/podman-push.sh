@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 IMAGENAME="$(basename "$PWD")"
 echo "Building $IMAGENAME"
 podman build -t "$IMAGENAME" .
